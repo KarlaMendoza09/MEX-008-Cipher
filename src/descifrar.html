@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <!--Ponemos nuestro encabezado-->
+    <h1>Sycret</h1>
+   </head>
+   
+    <body>
+    <!--Creamos nuestros inputs para que el usuario ponga sus datos -->
+     <p>Por favor, ingrese en el recuadro el texto que deseas DESCIFRAR:</p>
+    <input type="text" id="txtDecode" value=""
+     placeholder="INGRESE TEXTO EN MAYUSCULAS" <br>
+
+   <p>Aguegue el Offset (elija un número entre 1 al 100, que indicará las posiciones que recorrerá el descifrado):</p>
+    <input type="number" id="offsetDecode" value=""
+    <br>
+
+  <!--Generamos boton conId, que nos permitirá desencadenar la función en cipher y js  -->
+    <br>
+   <br>
+   <button type="button" id="botonDescifrar">DESCIFRAR</button> 
+    <input type ="text" id="decodeResult"> 
+   <br>
+   <br>
+   <p>¡No olvide guardar su texto descifrado en un lugar seguro! </p>
+   <br>
+   <br>
+   <a href="index.html"> INICIO </a>
+
+   <!--Enlazamos nuestro html con js y cipher-->
+
+     <script src="cipher.js"></script>
+     <script src="indexdescifrar.js"></script>
+
+   </body>
+   </html>
