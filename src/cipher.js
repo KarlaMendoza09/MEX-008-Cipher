@@ -1,29 +1,33 @@
 window.cipher = {
-   encode: (offset,string) =>
-   
-   //Enunciamos la variable vacía que contendrá la palabra que ingrese el usuario//
-    let newText='';
-   
-   //Convertimos cadena de texto a mayúsculas
-   string = string.toUppercase();
-   
-   //Creamos bucle "For", iniciando en cero y sentenciando que aumente de uno en uno
-     for(let i= 0;i<string.lenght;i++);{
-     
-    //Declaramos la constante que va a convertir las letras en mayúsculas en nuestrop programa
-       const asciiCode = string[i].charCodeAt();
-     
-     //Aplicamos la fórmula 
-     const modele=(asciiCode-65+offset)%26+65;
-    
-     //Para obtener caracter o letra del texto quye se ingrese
-     const caracter=String.fromcharCodeAt (modele)
-     
-     //Declaramos la constante que nos arrojará l palabra convertida en código ASCII y mayúsculas
-       newText= newText + caracter
-     }
+   encode: (offset,string) =>{
 
-     return newText
-    
+  let newText=0;
+  
+  //Declaramos nuestra variable vacía para que el usuario agregue sus datos
+  let textModificado= '';
+  
+  //Realizamos un bucle FOR para que se cifre desde cero
+   for (let i=0; i < string.lenght; i++)
 
-//Funciones para descifrar*/
+  //Después de cambiar la letra, vamos a aplicar código ASCII
+  const asciiCode= string.charCodeAt (i);
+    
+  
+  if (asciiCode >=65 && asciiCode <=90)
+   
+   
+newText= (asciiCode-65+offset)%26 + 65;
+
+//
+  else if (asciiCode >= 97 && asciiCode <=122)
+
+  newText= asciiCode;
+ //Convertirtiendo el número a través de ASCII a letra
+ textModificado= string.fromCharcode(newText); 
+   }
+ return newText
+ 
+
+
+
+   
